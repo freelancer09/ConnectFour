@@ -1,0 +1,35 @@
+﻿<Window x:Class="ConnectFour.Presentation.HelpView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConnectFour.Presentation"
+        mc:Ignorable="d"
+        Title="Help" 
+        Height="330" 
+        Width="450"
+        Background="Beige">
+    <Grid>
+        <StackPanel 
+            Orientation="Vertical" 
+            HorizontalAlignment="Center" 
+            Margin="20">
+            <Label 
+                FontSize="16"
+                HorizontalAlignment="Center"
+                FontWeight="Bold"
+                Content="Welcome to Connect Between 3 and 5!"/>
+            <TextBlock TextWrapping="Wrap" Margin="20" FontSize="16">
+                In this simple game Player Red and Player Yellow take turns placing pieces on the game board. 
+                Starting with Player Red, select the column at the top of the board for your move. This will 
+                drop a piece to the lowest empty space. The first player to connect four pieces (vertical, 
+                horizontal, or diagonal) in a row is the winner!
+            </TextBlock>
+            <Button 
+                Width="150"
+                Height="30"
+                FontSize="16"
+                Content="Close" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

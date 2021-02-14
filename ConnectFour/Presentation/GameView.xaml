@@ -1,0 +1,401 @@
+﻿<Window x:Class="ConnectFour.Presentation.GameView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConnectFour.Presentation"
+        mc:Ignorable="d"
+        Title="Connect Between 3 and 5"
+        Height="620" 
+        Width="820"
+        Background="Beige">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="0"
+                Tag="0"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="1"
+                Tag="1"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="2"
+                Tag="2"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="3"
+                Tag="3"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="4"
+                Tag="4"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="5"
+                Tag="5"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Ellipse
+                Grid.Row="0"
+                Grid.Column="6"
+                Tag="6"
+                Fill="White" MouseMove="Gameboard_Enter" MouseLeave="Gameboard_Leave" MouseUp="Gameboard_Click"/>
+            <Rectangle 
+                Grid.Row="1"
+                Grid.ColumnSpan="7"
+                Grid.RowSpan="6"
+                Fill="Blue"/>
+             <Ellipse
+                Grid.Row="1"
+                Grid.Column="0"
+                Tag="00"
+                Fill="{Binding Gameboard.CurrentBoard[0][0]}"/>
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="1"
+                Tag="01"
+                Fill="{Binding Gameboard.CurrentBoard[0][1]}"/>
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="2"
+                Tag="02"
+                Fill="{Binding Gameboard.CurrentBoard[0][2]}"/>
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="3"
+                Tag="03"
+                Fill="{Binding Gameboard.CurrentBoard[0][3]}"/>
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="4"
+                Tag="04"
+                Fill="{Binding Gameboard.CurrentBoard[0][4]}"/>
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="5"
+                Tag="05"
+                Fill="{Binding Gameboard.CurrentBoard[0][5]}"/>
+            <Ellipse
+                Grid.Row="1"
+                Grid.Column="6"
+                Tag="06"
+                Fill="{Binding Gameboard.CurrentBoard[0][6]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="0"
+                Tag="10"
+                Fill="{Binding Gameboard.CurrentBoard[1][0]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="1"
+                Tag="11"
+                Fill="{Binding Gameboard.CurrentBoard[1][1]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="2"
+                Tag="12"
+                Fill="{Binding Gameboard.CurrentBoard[1][2]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="3"
+                Tag="13"
+                Fill="{Binding Gameboard.CurrentBoard[1][3]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="4"
+                Tag="14"
+                Fill="{Binding Gameboard.CurrentBoard[1][4]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="5"
+                Tag="15"
+                Fill="{Binding Gameboard.CurrentBoard[1][5]}"/>
+            <Ellipse
+                Grid.Row="2"
+                Grid.Column="6"
+                Tag="16"
+                Fill="{Binding Gameboard.CurrentBoard[1][6]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="0"
+                Tag="20"
+                Fill="{Binding Gameboard.CurrentBoard[2][0]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="1"
+                Tag="21"
+                Fill="{Binding Gameboard.CurrentBoard[2][1]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="2"
+                Tag="22"
+                Fill="{Binding Gameboard.CurrentBoard[2][2]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="3"
+                Tag="23"
+                Fill="{Binding Gameboard.CurrentBoard[2][3]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="4"
+                Tag="24"
+                Fill="{Binding Gameboard.CurrentBoard[2][4]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="5"
+                Tag="05"
+                Fill="{Binding Gameboard.CurrentBoard[2][5]}"/>
+            <Ellipse
+                Grid.Row="3"
+                Grid.Column="6"
+                Tag="26"
+                Fill="{Binding Gameboard.CurrentBoard[2][6]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="0"
+                Tag="30"
+                Fill="{Binding Gameboard.CurrentBoard[3][0]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="1"
+                Tag="31"
+                Fill="{Binding Gameboard.CurrentBoard[3][1]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="2"
+                Tag="32"
+                Fill="{Binding Gameboard.CurrentBoard[3][2]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="3"
+                Tag="33"
+                Fill="{Binding Gameboard.CurrentBoard[3][3]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="4"
+                Tag="34"
+                Fill="{Binding Gameboard.CurrentBoard[3][4]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="5"
+                Tag="35"
+                Fill="{Binding Gameboard.CurrentBoard[3][5]}"/>
+            <Ellipse
+                Grid.Row="4"
+                Grid.Column="6"
+                Tag="36"
+                Fill="{Binding Gameboard.CurrentBoard[3][6]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="0"
+                Tag="40"
+                Fill="{Binding Gameboard.CurrentBoard[4][0]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="1"
+                Tag="41"
+                Fill="{Binding Gameboard.CurrentBoard[4][1]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="2"
+                Tag="42"
+                Fill="{Binding Gameboard.CurrentBoard[4][2]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="3"
+                Tag="43"
+                Fill="{Binding Gameboard.CurrentBoard[4][3]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="4"
+                Tag="44"
+                Fill="{Binding Gameboard.CurrentBoard[4][4]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="5"
+                Tag="45"
+                Fill="{Binding Gameboard.CurrentBoard[4][5]}"/>
+            <Ellipse
+                Grid.Row="5"
+                Grid.Column="6"
+                Tag="46"
+                Fill="{Binding Gameboard.CurrentBoard[4][6]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="0"
+                Tag="50"
+                Fill="{Binding Gameboard.CurrentBoard[5][0]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="1"
+                Tag="51"
+                Fill="{Binding Gameboard.CurrentBoard[5][1]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="2"
+                Tag="52"
+                Fill="{Binding Gameboard.CurrentBoard[5][2]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="3"
+                Tag="53"
+                Fill="{Binding Gameboard.CurrentBoard[5][3]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="4"
+                Tag="54"
+                Fill="{Binding Gameboard.CurrentBoard[5][4]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="5"
+                Tag="55"
+                Fill="{Binding Gameboard.CurrentBoard[5][5]}"/>
+            <Ellipse
+                Grid.Row="6"
+                Grid.Column="6"
+                Tag="56"
+                Fill="{Binding Gameboard.CurrentBoard[5][6]}"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <StackPanel
+                Grid.Row="1"
+                Orientation="Vertical"
+                Margin="10">
+                 <Label
+                     Content="{Binding PlayerRed.Name}"
+                     FontWeight="Bold"
+                     FontSize="16"
+                     HorizontalAlignment="Center"/>           
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                    <Label
+                        Content="Wins:"
+                        FontSize="16"/>
+                    <Label
+                        Content="{Binding PlayerRed.Wins}"
+                        FontSize="16"/>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                    <Label
+                        Content="Losses:"
+                        FontSize="16"/>
+                    <Label
+                        Content="{Binding PlayerRed.Losses}"
+                        FontSize="16"/>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                    <Label
+                        Content="Ties:"
+                        FontSize="16"/>
+                    <Label
+                        Content="{Binding PlayerRed.Ties}"
+                        FontSize="16"/>
+                </StackPanel>
+                <Label
+                     Content="{Binding PlayerYellow.Name}"
+                     FontWeight="Bold"
+                     FontSize="16"
+                     HorizontalAlignment="Center"/>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                    <Label
+                        Content="Wins:"
+                        FontSize="16"/>
+                    <Label
+                        Content="{Binding PlayerYellow.Wins}"
+                        FontSize="16"/>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                    <Label
+                        Content="Losses:"
+                        FontSize="16"/>
+                    <Label
+                        Content="{Binding PlayerYellow.Losses}"
+                        FontSize="16"/>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                    <Label
+                        Content="Ties:"
+                        FontSize="16"/>
+                    <Label
+                        Content="{Binding PlayerYellow.Ties}"
+                        FontSize="16"/>
+                </StackPanel>
+                <Button
+                    x:Name="NewGame"
+                    Content="New Round"
+                    Width="150"
+                    Height="30"
+                    FontSize="16"
+                    Margin="5"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="ResetGame"
+                    Content="Reset Score"
+                    Width="150"
+                    Height="30"
+                    FontSize="16"
+                    Margin="5" 
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="Help"
+                    Content="Help"
+                    Width="150"
+                    Height="30"
+                    FontSize="16"
+                    Margin="5"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="Quit"
+                    Content="Quit"
+                    Width="150"
+                    Height="30"
+                    FontSize="16"
+                    Margin="5" 
+                    Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
