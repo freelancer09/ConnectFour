@@ -1,0 +1,17 @@
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.csprojAssemblyReference.cache
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\Presentation\GameView.g.cs
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\App.g.cs
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour_MarkupCompile.cache
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour_MarkupCompile.lref
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\bin\Debug\ConnectFour.exe.config
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\bin\Debug\ConnectFour.exe
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\bin\Debug\ConnectFour.pdb
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\Presentation\GameView.baml
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.g.resources
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.Properties.Resources.resources
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.csproj.GenerateResource.cache
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.csproj.CoreCompileInputs.cache
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.exe
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\ConnectFour.pdb
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\Presentation\HelpView.g.cs
+D:\NMC\CIT 195\Projects\ConnectFour\ConnectFour\obj\Debug\Presentation\HelpView.baml
