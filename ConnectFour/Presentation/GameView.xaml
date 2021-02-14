@@ -289,6 +289,16 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="6*"/>
             </Grid.RowDefinitions>
+            <Label
+                FontSize="20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="Bold"
+                Content="{Binding StatusMessage}"/>
+            <Border 
+                BorderBrush="LightGray"
+                BorderThickness="2"
+                />
             <StackPanel
                 Grid.Row="1"
                 Orientation="Vertical"

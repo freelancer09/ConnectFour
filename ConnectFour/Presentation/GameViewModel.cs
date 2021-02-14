@@ -13,6 +13,7 @@ namespace ConnectFour.Presentation
         private Gameboard _gameboard;
         private Player _playerRed = new Player();
         private Player _playerYellow = new Player();
+        private string _statusMessage;
 
         public Gameboard Gameboard
         {
@@ -41,6 +42,15 @@ namespace ConnectFour.Presentation
                 OnPropertyChanged(nameof(PlayerYellow));
             }
         }
+        public string StatusMessage
+        {
+            get { return _statusMessage; }
+            set
+            {
+                _statusMessage = value;
+                OnPropertyChanged(nameof(StatusMessage));
+            }
+        }
         public GameViewModel()
         {
             InitializeGame();
@@ -49,7 +59,8 @@ namespace ConnectFour.Presentation
         {
             _playerRed.Name = "Player Red";
             _playerYellow.Name = "Player Yellow";
-
+            _statusMessage = PlayerRed.Name + " turn";
+            
             _gameboard = new Gameboard();
 
             _gameboard.CurrentRoundState = Gameboard.GameboardState.PlayerRedTurn;
@@ -82,12 +93,16 @@ namespace ConnectFour.Presentation
                         _gameboard.CurrentRoundState = Gameboard.GameboardState.PlayerYellowTurn;
                         Gameboard.CurrentPlayer = Gameboard.PLAYER_YELLOW;
                         OnPropertyChanged(nameof(CurrentPlayer));
+                        _statusMessage = PlayerYellow.Name + " turn";
+                        OnPropertyChanged(nameof(StatusMessage));
                     }
                     else if (_gameboard.CurrentRoundState == Gameboard.GameboardState.PlayerYellowTurn)
                     {
                         _gameboard.CurrentRoundState = Gameboard.GameboardState.PlayerRedTurn;
                         Gameboard.CurrentPlayer = Gameboard.PLAYER_RED;
                         OnPropertyChanged(nameof(CurrentPlayer));
+                        _statusMessage = PlayerRed.Name + " turn";
+                        OnPropertyChanged(nameof(StatusMessage));
                     }
                     UpdateCurrentRoundState();
                 }
@@ -102,6 +117,8 @@ namespace ConnectFour.Presentation
                     OnPropertyChanged(nameof(Gameboard));
                     _gameboard.CurrentRoundState = Gameboard.GameboardState.PlayerRedTurn;
                     _gameboard.CurrentPlayer = _gameboard.PLAYER_RED;
+                    _statusMessage = PlayerRed.Name + " turn";
+                    OnPropertyChanged(nameof(StatusMessage));
                     break;
                 case "ResetGame":
                     PlayerRed.Wins = 0;
@@ -121,18 +138,24 @@ namespace ConnectFour.Presentation
                 PlayerRed.Wins++;
                 PlayerYellow.Losses++;
                 _gameboard.CurrentPlayer = PlayerNone;
+                _statusMessage = PlayerRed.Name + " wins!";
+                OnPropertyChanged(nameof(StatusMessage));
             }
             else if (_gameboard.CurrentRoundState == Gameboard.GameboardState.PlayerYellowWin)
             {
                 PlayerYellow.Wins++;
                 PlayerRed.Losses++;
                 _gameboard.CurrentPlayer = PlayerNone;
+                _statusMessage = PlayerYellow.Name + " wins!";
+                OnPropertyChanged(nameof(StatusMessage));
             }
             else if (_gameboard.CurrentRoundState == Gameboard.GameboardState.Draw)
             {
                 PlayerYellow.Ties++;
                 PlayerRed.Ties++;
-                _gameboard.CurrentPlayer = PlayerNone;
+                _gameboard.CurrentPlayer = PlayerNone; 
+                _statusMessage = "Tie game!";
+                OnPropertyChanged(nameof(StatusMessage));
             }
         }
     }
